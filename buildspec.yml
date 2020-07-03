@@ -18,8 +18,5 @@ phases:
     commands:
       - echo Building...
       - yarn build
-artifacts:
-  files:
-    - "**/*"
-  discard-paths: no
-  base-directory: dist
+      - yarn start
+

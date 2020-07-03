@@ -17,6 +17,5 @@ phases:
   build:
     commands:
       - echo Building...
-      - yarn build
       - yarn start
 

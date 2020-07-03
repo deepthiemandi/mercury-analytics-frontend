@@ -22,9 +22,9 @@
     "url-parse": "^1.4.7"
   },
   "scripts": {
-    "start": "PORT=3004 REACT_APP_VERSION=$(git rev-parse HEAD) react-scripts start",
-    "build": "REACT_APP_VERSION=$(git rev-parse HEAD) react-scripts build",
-    "test": "REACT_APP_VERSION=$(git rev-parse HEAD) react-scripts test",
+    "start": "PORT=3004 REACT_APP_VERSION=$(git rev-parse --abbrev-ref HEAD) react-scripts start",
+    "build": "REACT_APP_VERSION=$(git rev-parse --abbrev-ref HEAD) react-scripts build",
+    "test": "REACT_APP_VERSION=$(git rev-parse --abbrev-ref HEAD) react-scripts test",
     "eject": "react-scripts eject",
     "sync": "aws s3 sync build/ s3://$BUCKET_NAME",
     "invalidate": "aws cloudfront create-invalidation --distribution-id $DISTRIBUTION_ID --paths \"/*\"",
